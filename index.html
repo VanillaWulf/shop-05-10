@@ -18,7 +18,12 @@
                 <img class="header__search" src="./img/loupe.svg" alt="search">
             </div>
             <div class="header__wrp-controls">
-                <button class="header__menu-btn" type="button"><img src="./img/burger.svg" alt="burger"></button>
+                <button class="header__menu-btn" type="button">
+                    <svg class="icon" width="32" height="23" viewBox="0 0 32 23"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 23V20.31H32V23H0ZM0 12.76V10.07H32V12.76H0ZM0 2.69V0H32V2.69H0Z" />
+                    </svg>
+                </button>
                 <a class="header__link" href="#"><img src="./img/burger.svg" alt="person"></a>
                 <a class="header__link" href="#"><img src="./img/burger.svg" alt="cart"></a>
             </div>
@@ -65,13 +70,14 @@
         <section class="brand">
             <img class="brand__img" src="./img/man.jpg" alt="man">
             <div class="brand__wrp">
-                <h1 class="brand__title">the brand<span class="brand__subtitle">of luxerious<span class="brand__subtitle-pink">fashion</span></span></h1>
+                <h1 class="brand__title">the brand<span class="brand__subtitle">of luxerious<span
+                            class="brand__subtitle-pink">fashion</span></span></h1>
             </div>
         </section>
         <section class="sales">
             <h2 class="sales__heading visually-hidden">Sales</h2>
             <ul class="sales__list">
-                <li class="sales__item">
+                <li class="sales__item sales__item--women">
                     <p class="sales__text">30% off</p>
                     <h3 class="sales__item-title">for women</h3>
                 </li>
@@ -89,7 +95,7 @@
                 </li>
             </ul>
         </section>
-        <section>
+        <section class="fetured">
             <h2>Fetured Items</h2>
             <p>Shop for items based on what we featured in this week</p>
             <ul>
@@ -136,6 +142,10 @@
                     <span>$52.00</span>
                 </li>
             </ul>
+            <button class="fetured__button button button--transparent"></button>
+        </section>
+        <section>
+
         </section>
     </main>
     <footer></footer>
