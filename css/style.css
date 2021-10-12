@@ -1,6 +1,7 @@
 :root {
     --black: #222222;
     --light-pink: #F1E4E6;
+    --dark-pink: #F16D7F;
 }
 
 .page {
@@ -75,10 +76,27 @@
     font-weight: 900;
     line-height: 58px;
     text-transform: uppercase;
+    position: relative;
+}
+
+.brand__title::before {
+    height: 92px;
+    width: 12px;
+    background-color: var(--dark-pink);
+    content: '';
+    position: absolute;
+    left: -40px;
+    top: 10px;
 }
 
 .brand__subtitle {
     display: flex;
 }
 
-.brand__subtitle-pink {}
+.icon {
+    fill: white;
+}
+
+.header__menu-btn:hover .icon {
+    fill: red;
+}
