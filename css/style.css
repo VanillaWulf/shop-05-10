@@ -1,102 +1,179 @@
-:root {
-    --black: #222222;
-    --light-pink: #F1E4E6;
-    --dark-pink: #F16D7F;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 .page {
-    font-family: Lato;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 17px;
+  font-family: Lato;
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .container {
-    width: 1140px;
-    margin: 0 auto;
+  width: 1140px;
+  margin: 0 auto;
 }
 
 .visually-hidden {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .header {
-    background-color: var(--black);
+  background-color: #222222;
 }
-
-.header__nav {
-    display: none;
+.header .header__nav {
+  position: absolute;
+  background-color: white;
+  right: 0;
+  bottom: -460px;
+  display: none;
+  z-index: 2;
 }
-
-.header__wrp {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 75px;
+.header .header__nav--show {
+  display: block;
 }
-
-.header__logo {
-    margin: 0 41px 0 0;
+.header .header__wrp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 75px;
+  position: relative;
 }
-
-.header__link {
-    margin: 0 0 0 31px;
+.header .header__logo {
+  margin: 0 41px 0 0;
 }
-
-.header__menu-btn {
-    border: none;
-    background-color: transparent;
+.header .header__link {
+  margin: 0 0 0 31px;
+}
+.header .header__menu-btn {
+  border: none;
+  background-color: transparent;
 }
 
 .brand {
-    display: flex;
+  display: flex;
 }
-
 .brand__wrp {
-    background-color: var(--light-pink);
-    flex-grow: 1;
-    padding: 0 0 0 92px;
-    display: flex;
-    align-items: center;
+  background-color: #F1E4E6;
+  flex-grow: 1;
+  padding: 0 0 0 92px;
+  display: flex;
+  align-items: center;
 }
-
 .brand__title {
-    font-family: Lato;
-    font-size: 48px;
-    font-weight: 900;
-    line-height: 58px;
-    text-transform: uppercase;
-    position: relative;
+  font-family: "Lato";
+  text-transform: uppercase;
+  position: relative;
+  font-size: 48px;
+  line-height: 50px;
+  font-weight: 400;
+  font-style: normal;
 }
-
 .brand__title::before {
-    height: 92px;
-    width: 12px;
-    background-color: var(--dark-pink);
-    content: '';
-    position: absolute;
-    left: -40px;
-    top: 10px;
+  height: 92px;
+  width: 12px;
+  background-color: #F16D7F;
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: 10px;
 }
-
 .brand__subtitle {
-    display: flex;
+  display: flex;
 }
 
-.icon {
-    fill: white;
+.fetured__list {
+  display: flex;
+  justify-content: space-between;
 }
 
-.header__menu-btn:hover .icon {
-    fill: red;
+.fetured__item {
+  width: 360px;
 }
+
+.fetured__item-wrp {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fetured__item-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+.fetured__item-button {
+  position: absolute;
+  display: none;
+}
+
+.fetured__item-wrp:hover .fetured__item-button,
+.fetured__item-wrp:hover .fetured__item-overlay {
+  display: block;
+}
+
+/*# sourceMappingURL=style.css.map */

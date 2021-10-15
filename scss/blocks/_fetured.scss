@@ -1,0 +1,32 @@
+.fetured__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fetured__item {
+    width: 360px;
+}
+
+.fetured__item-wrp {
+    position: relative;
+    @include flex-center;
+}
+
+.fetured__item-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    display: none;
+}
+
+.fetured__item-button {
+    position: absolute;
+    display: none;
+}
+
+.fetured__item-wrp:hover .fetured__item-button,
+.fetured__item-wrp:hover .fetured__item-overlay {
+    display: block;
+}
