@@ -1,0 +1,35 @@
+.sales {
+    .sales__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .sales__item {
+        background-color: olive;
+        min-height: 260px;
+        width: 31%;
+
+        @include tablet {
+            min-height: 168px;
+        }
+
+        @include mobile {
+            width: 100%;
+            min-height: 247px;
+        }
+    }
+
+    .sales__item--shoes {
+        width: 100%;
+        min-height: 180px;
+
+        @include tablet {
+            min-height: 116px;
+        }
+
+        @include mobile {
+            min-height: 111px;
+        }
+    }
+}
