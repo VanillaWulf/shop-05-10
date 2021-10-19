@@ -1,10 +1,20 @@
 .fetured__list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+
+
+    @include tablet-min-width {
+        justify-content: space-around;
+    }
 }
 
 .fetured__item {
     width: 360px;
+
+    @include mobile {
+        width: 100%;
+    }
 }
 
 .fetured__item-wrp {
